@@ -1,0 +1,13 @@
+#!/bin/sh
+
+#  preinstall
+#  TriFiClient
+#
+#  Created by Kirkby, Brian on 6/14/14.
+#  Copyright (c) 2014 Zapos IP Inc. All rights reserved.
+
+if /bin/launchctl list "com.zappos.trifi.plist" &> /dev/null; then
+    /bin/launchctl unload "/Library/LaunchDaemons/com.zappos.trifi.plist"
+fi
+
+exit 0

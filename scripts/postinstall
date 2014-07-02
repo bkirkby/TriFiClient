@@ -1,0 +1,11 @@
+#!/bin/sh
+
+#  postinstall
+#  TriFiClient
+#
+#  Created by Kirkby, Brian on 6/14/14.
+#  Copyright (c) 2014 Zapos IP Inc. All rights reserved.
+
+/bin/launchctl load "/Library/LaunchDaemons/com.zappos.trifi.plist"
+
+exit 0

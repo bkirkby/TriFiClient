@@ -7,27 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A2EA204194CBE7E00C35E54 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A2EA203194CBE7E00C35E54 /* main.cpp */; };
-		6A2EA206194CBE7E00C35E54 /* TriFiClient.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6A2EA205194CBE7E00C35E54 /* TriFiClient.1 */; };
+		6A2EA206194CBE7E00C35E54 /* trifi.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6A2EA205194CBE7E00C35E54 /* trifi.1 */; };
+		6A2EA20F194CC41F00C35E54 /* CoreWLAN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A2EA20E194CC41F00C35E54 /* CoreWLAN.framework */; };
+		6AFD5DA7194CCF2200B3CD05 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6AFD5DA6194CCF2200B3CD05 /* main.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6A2EA1FE194CBE7E00C35E54 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				6A2EA206194CBE7E00C35E54 /* TriFiClient.1 in CopyFiles */,
+				6A2EA206194CBE7E00C35E54 /* trifi.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6A292D171962268000BD37D8 /* TriFiClient-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TriFiClient-Info.plist"; sourceTree = "<group>"; };
 		6A2EA200194CBE7E00C35E54 /* TriFiClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TriFiClient; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A2EA203194CBE7E00C35E54 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		6A2EA205194CBE7E00C35E54 /* TriFiClient.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = TriFiClient.1; sourceTree = "<group>"; };
+		6A2EA205194CBE7E00C35E54 /* trifi.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = trifi.1; sourceTree = "<group>"; };
+		6A2EA20E194CC41F00C35E54 /* CoreWLAN.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreWLAN.framework; path = System/Library/Frameworks/CoreWLAN.framework; sourceTree = SDKROOT; };
+		6AFD5DA5194CCF2200B3CD05 /* com.zappos.trifi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = com.zappos.trifi.plist; sourceTree = "<group>"; };
+		6AFD5DA6194CCF2200B3CD05 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		6AFD5DA8194CD2C000B3CD05 /* distribution.xml.bki */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = distribution.xml.bki; sourceTree = "<group>"; };
+		6AFD5DAD194CDD5100B3CD05 /* postinstall */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = postinstall; sourceTree = "<group>"; };
+		6AFD5DAE194CDDB300B3CD05 /* preinstall */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = preinstall; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A2EA20F194CC41F00C35E54 /* CoreWLAN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +52,8 @@
 		6A2EA1F7194CBE7E00C35E54 = {
 			isa = PBXGroup;
 			children = (
+				6AFD5DA9194CDD1C00B3CD05 /* scripts */,
+				6A2EA20E194CC41F00C35E54 /* CoreWLAN.framework */,
 				6A2EA202194CBE7E00C35E54 /* TriFiClient */,
 				6A2EA201194CBE7E00C35E54 /* Products */,
 			);
@@ -60,10 +70,22 @@
 		6A2EA202194CBE7E00C35E54 /* TriFiClient */ = {
 			isa = PBXGroup;
 			children = (
-				6A2EA203194CBE7E00C35E54 /* main.cpp */,
-				6A2EA205194CBE7E00C35E54 /* TriFiClient.1 */,
+				6AFD5DA5194CCF2200B3CD05 /* com.zappos.trifi.plist */,
+				6AFD5DA6194CCF2200B3CD05 /* main.mm */,
+				6A2EA205194CBE7E00C35E54 /* trifi.1 */,
+				6AFD5DA8194CD2C000B3CD05 /* distribution.xml.bki */,
+				6A292D171962268000BD37D8 /* TriFiClient-Info.plist */,
 			);
 			path = TriFiClient;
+			sourceTree = "<group>";
+		};
+		6AFD5DA9194CDD1C00B3CD05 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				6AFD5DAD194CDD5100B3CD05 /* postinstall */,
+				6AFD5DAE194CDDB300B3CD05 /* preinstall */,
+			);
+			path = scripts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -76,6 +98,7 @@
 				6A2EA1FC194CBE7E00C35E54 /* Sources */,
 				6A2EA1FD194CBE7E00C35E54 /* Frameworks */,
 				6A2EA1FE194CBE7E00C35E54 /* CopyFiles */,
+				6A7CE5CE194CC9970002933B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -112,12 +135,28 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6A7CE5CE194CC9970002933B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -d `pwd`/Package ] ; then\n  rm -Rf `pwd`/Package\nfi\nmkdir -p `pwd`/Package/usr/bin\nmkdir -p `pwd`/Package/Library/LaunchDaemons\nmkdir -p `pwd`/Package/usr/share/man/man1\ncp TriFiClient/com.zappos.trifi.plist `pwd`/Package/Library/LaunchDaemons/\ncp ${BUILT_PRODUCTS_DIR}/TriFiClient `pwd`/Package/usr/bin/trifi\ncp TriFiClient/trifi.1 `pwd`/Package/usr/share/man/man1\n\nif [ -d TriFiClient.pkg ] ; then\n    rm TriFiClient.pkg\nfi\n\npkgbuild --root `pwd`/Package \\\n    --identifier com.zappos.trifi.TriFiClient \\\n    --scripts `pwd`/scripts \\\n    --version 0.01 \\\n    --ownership recommended \\\n    TriFiClient.pkg\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6A2EA1FC194CBE7E00C35E54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A2EA204194CBE7E00C35E54 /* main.cpp in Sources */,
+				6AFD5DA7194CCF2200B3CD05 /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +266,7 @@
 				6A2EA20B194CBE7E00C35E54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
